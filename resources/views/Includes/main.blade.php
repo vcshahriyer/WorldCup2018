@@ -117,7 +117,7 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-<script type='text/javascript' src='{{asset('js/libs/jquery.flexslider-min.js')}}'></script>
+<script type='text/javascript' src="{{asset('js/libs/jquery.flexslider-min.js')}}"></script>
 <script src="{{asset('js/jquery.bxslider.min.js')}}"></script>
 
 <!-- Custom -->

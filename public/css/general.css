@@ -3567,6 +3567,7 @@ p.please-login a{
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    color: #da0040;
 }
 p.please-login a:hover{
     color: #c40039;

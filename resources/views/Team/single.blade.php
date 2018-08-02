@@ -5,7 +5,7 @@
         <div class="container">
             <h2 class="awrd-heading"><span>Team {{ $team->team_name }}</span></h2>
             <div class="img-wrap">
-                <img src="{{ asset('images/Featured_img/'.$team->featured_img) }}" alt="Team image">
+                <img src="{{ asset('images/Featured_Img/'.$team->featured_img) }}" alt="Team image">
             </div>
             <article class="teamd">
                 <div class="col-4">
