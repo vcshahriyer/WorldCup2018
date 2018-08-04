@@ -3269,6 +3269,11 @@ td.versus p {
     color: #da0040;
     text-align: center;
 }
+h5.penalty {
+    line-height: 17px;
+    font-size: 13px;
+    color: #da0040;
+}
 span.team1,
 span.team2{
     font-size: 24px;

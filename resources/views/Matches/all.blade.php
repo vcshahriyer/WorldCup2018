@@ -34,6 +34,10 @@
                     </td>
                     <td class="versus">
                         <p>{{$match->team1_goal}}&nbsp;-&nbsp;{{$match->team2_goal}}</p>
+
+                            @if($match->is_penalty)
+                                <h5 class="penalty">{{$match->is_penalty}}</h5>
+                            @endif
                     </td>
                     <td class="left-float">
                         <img src="{{asset('images/Flags/'.$match->cd2.'.png')}}" alt=""><span class="team2"> {{$match->team2}}</span>

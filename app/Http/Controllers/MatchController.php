@@ -21,7 +21,7 @@ class MatchController extends Controller
 	                  ->join('teams as tm1','m.team1','=','tm1.team_name')
 	                  ->join('teams as tm2','m.team2','=','tm2.team_name')
 	                  ->select('m.team1', 'm.team1_goal', 'm.team2_goal', 'm.team2', 'm.stadium_name', 'm.round',
-		                  'm.date','tm1.code as cd1', 'tm2.code as cd2')
+		                  'm.date','m.is_penalty','tm1.code as cd1', 'tm2.code as cd2')
 	                    ->where('m.round','Round of 16')
 		                ->orWhere('m.round','Quarter-finals')
 		                ->orWhere('m.round','Semi-finals')
