@@ -44,10 +44,10 @@
             <div class="tab"><a href="{{route('matches.all')}}">matches</a></div>
             <div class="match">
                 <div class="col-6">
-                    <div class="m-img"><img src="{{ 'images/Featured_img/'.$main->fmg1 }}" alt=""/></div>
+                    <div class="m-img"><img src="{{ 'images/Featured_Img/'.$main->fmg1 }}" alt=""/></div>
                 </div>
                 <div class="col-6">
-                    <div class="m-img"><img src="{{ 'images/Featured_img/'.$main->fmg2 }}" alt=""/></div>
+                    <div class="m-img"><img src="{{ 'images/Featured_Img/'.$main->fmg2 }}" alt=""/></div>
                 </div>
                 <div class="m-result">
                     <div class="logo-club col-3"><img src="{{ 'images/Flags/'.$main->cd1.'.png'}}" alt=""/></div>
@@ -122,7 +122,7 @@
                 <div class="bl-title"><h3>Stadiums &nbsp; <a href="{{route('stadiums')}}">\ &nbsp; see all Stadiums ›</a></h3></div>
                 @foreach($stadiums as $stadium)
                     <div class="s-post">
-                        <div class="post-img"><img src="{{ 'images/Stadiums/'.$stadium->picture }}" alt=""/></div>
+                        <div class="post-img"><img src="{{ 'images/stadiums/'.$stadium->picture }}" alt=""/></div>
                         <h3><a href="/stadium/{{ str_replace(' ', '-', $stadium->name) }}"><span>{{ $stadium->name }}</span></a></h3>
                     </div>
                 @endforeach

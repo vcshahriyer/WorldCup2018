@@ -1,4 +1,4 @@
-@extends('includes.main')
+@extends('Includes.main')
 
 @section('content')
 <!-- Breadcrumb and title -->
