@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\SearchRequest;
 use App\Match;
 class PagesController extends Controller
 {
@@ -51,7 +52,39 @@ class PagesController extends Controller
 		                            'news'    => $news,
 	                        ]);
     }
-
+    public function  search(SearchRequest $request){
+		if ($request->what == "teams"){
+			$team = DB::table('teams')
+			          ->where('teams.team_name','like','%'.$request->data.'%')
+			          ->first();
+			$players = DB::table('players')
+			             ->join('teams','players.team_name','teams.team_name')
+			             ->where('players.team_name','like','%'.$request->data.'%')
+			             ->get();
+			if ($team && $players){
+				return view('Team.single',[
+					"team" => $team,
+					"players" =>$players
+				]);
+			}else{
+				abort(404);
+			}
+		}elseif ($request->what == "players"){
+			$player = DB::table('players')
+			            ->join('teams','players.team_name','teams.team_name')
+			            ->where('players.name','like','%'.$request->data.'%')
+			            ->first();
+			if ($player){
+				return view('Team.single-player',[
+					"player" =>$player
+				]);
+			}else{
+				abort(404);
+			}
+		}else{
+			abort(404);
+		}
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -89,10 +89,23 @@
 <section>
     <div class="container">
         <div id="teaser">
-            <h2>RUSSIA 2018: AWARDS </h2>
-            <p>Find out who collected the various individual
-                and collective awards at the 2018 FIFA World Cup Russia.</p>
-            <a href="{{route('awards')}}" class="btn btn-red">see winners</a>
+            <h2>RUSSIA 2018: SEARCH </h2>
+            <form action="{{route('search')}}" method="post">
+                @csrf
+                <div class="form-wrap">
+                    <div class="col-10">
+                        <input type="text" name="data" required>
+                    </div>
+                    <div class="col-2">
+                        <select name="what" id="what" required>
+                            <option value="teams">Teams</option>
+                            <option value="players">Players</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <button type="submit" class="btn btn-red">Search</button>
+            </form>
         </div>
     </div>
 </section>

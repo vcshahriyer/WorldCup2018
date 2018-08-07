@@ -1569,8 +1569,7 @@ p.invalid-feedback {
 }
 .form-wrap input:-webkit-autofill,
 .form-wrap input:-webkit-autofill,
-.form-wrap textarea:-webkit-autofill,
-.form-wrap select:-webkit-autofill{
+.form-wrap textarea:-webkit-autofill{
     -webkit-text-fill-color: #fff;
     background-color: transparent;
     transition: background-color 5000s ease-in-out 0s;
@@ -1587,6 +1586,21 @@ p.invalid-feedback {
 .form-wrap textarea:-webkit-autofill:hover,
 .form-wrap textarea:-webkit-autofill:focus{
     border: 1px solid #bd0e3e;
+}
+.form-wrap select{
+    margin-left: 24px;
+    padding: 15px 5px;
+    background-color: #da0040;
+    color: #fff;
+    border: transparent;
+    font-family: russia;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.form-wrap select *{
+    opacity: 0.8;
+    background-color: #da0040;
+    border-radius: 5px;
 }
 .form-wrap label {
     line-height: 19px;

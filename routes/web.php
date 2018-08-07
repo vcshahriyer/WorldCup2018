@@ -50,3 +50,7 @@ Route::get('/award',[
 	'as' =>'awards',
 	'uses' => 'AwardController@index'
 ]);
+Route::post('/search',[
+	'as' =>'search',
+	'uses' =>'PagesController@search'
+]);
