@@ -2912,7 +2912,6 @@ article.blog-item {
 }
 
 /* HOME -> CLUB */
-#club{margin-top: 160px;}
 #club h2.awrd-heading {
     width: 230px;
     margin-top: 21px;
@@ -3944,7 +3943,6 @@ footer ul li a:hover {
 
     article.blog-item img {
         width: 100%;
-        height: auto;
     }
 
     .col-6 {
@@ -3999,9 +3997,10 @@ footer ul li a:hover {
         width: 100%;
     }
     .logo img{width: 30%;}
-    .tpi span img {width: 85%;}
+    .teamd .tpi span img {width: 85%;}
     h1{font-size: 28px;}
     h2.awrd-heading {font-size: 19px;}
+    .stad-i h2 {font-size: 22px;}
     .error h1 {margin: 0;font-size: 70px;}
     .error hr {margin: 30px auto;}
     .container.error {margin: 0px;}
@@ -4010,7 +4009,9 @@ footer ul li a:hover {
     .club-content .col-9 .bot-name {
         bottom: 0;
     }
-
+    table.table-striped-dflt tr td:first-child {
+        padding-left: 8px;
+    }
     #tab .tab-content img {
         max-width: 100%;
         height: auto;
@@ -4147,5 +4148,7 @@ footer ul li a:hover {
     span.result {font-size: 45px;}
     .logo-club img {max-width: 100%;}
     #club h2.awrd-heading {width: 200px;}
-
+    .single-player .tpi{
+        padding: 0px;
+    }
 }

@@ -41,7 +41,7 @@
                     <h5>{{$player->country}}</h5>
                     <h5>Role: {{$player->p_role}}</h5>
                     <h5>Age: {{$player->age}}</h5>
-                    <h5>Height: {{$player->height}}cm</h5>
+                    <h5>Height: {{$player->height}} CM</h5>
                 </div>
                 <div class="col-md-8 col-sm-8">
                     <h4>BIRTH Date:&nbsp; {{date('d-M-Y',strtotime($player->birth_date))}}</h4>
