@@ -1589,17 +1589,12 @@ p.invalid-feedback {
 }
 .form-wrap select{
     margin-left: 24px;
-    padding: 15px 5px;
+    padding: 9px 5px;
     background-color: #da0040;
     color: #fff;
     border: transparent;
     font-family: russia;
     font-size: 16px;
-    border-radius: 5px;
-}
-.form-wrap select *{
-    opacity: 0.8;
-    background-color: #da0040;
     border-radius: 5px;
 }
 .form-wrap label {
@@ -1615,6 +1610,10 @@ p.invalid-feedback {
 .form-wrap a.btn.btn-link:hover {opacity: 0.75;}
 .form-wrap label.form-check-label {margin: 20px 0;}
 .form-group.row.mb-0 {margin-top: 12px;}
+
+.form-wrap.search input[type=text] {
+    padding: 16px 5px;
+}
 
 /* Body
 /* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
@@ -3674,6 +3673,9 @@ footer ul li a:hover {
     .single-player {
         margin-bottom: 82%;
     }
+    .form-wrap.search{
+        margin-bottom: 5%;
+    }
 }
 @media (max-width: 960px) {
     header {
@@ -3739,7 +3741,6 @@ footer ul li a:hover {
         margin-top: 4%;
         margin-bottom: 17%;
     }
-
     .teamd .col-6 img {
         width: 100%;
         height: auto;
@@ -3843,6 +3844,7 @@ footer ul li a:hover {
         width: auto;
         height: auto;
     }
+    .form-wrap.search.bootstrap-iso select {margin-top: 3%;}
 }
 
 @media (max-width: 640px) {
@@ -3858,7 +3860,6 @@ footer ul li a:hover {
     .all-team {
         width: 100%;
     }
-
     .top {
         height: auto;
     }
@@ -3900,7 +3901,7 @@ footer ul li a:hover {
     }
 
     .logo-club img {
-        max-width: 100%;
+        max-width: 38%;
         width: auto;
     }
 
@@ -3998,10 +3999,11 @@ footer ul li a:hover {
         width: 100%;
     }
     .logo img{width: 30%;}
+    .tpi span img {width: 85%;}
     h1{font-size: 28px;}
+    h2.awrd-heading {font-size: 19px;}
     .error h1 {margin: 0;font-size: 70px;}
     .error hr {margin: 30px auto;}
-    h2{font-size: 22px !important;}
     .container.error {margin: 0px;}
 
     .club-content .col-3 .bot-name,
@@ -4140,4 +4142,10 @@ footer ul li a:hover {
 @media (max-width: 375px) {
     .fi-p{margin: 0px auto;}
     .fi-p:nth-child(even){margin: 0px auto;}
+}
+@media all and (max-width: 320px) {
+    span.result {font-size: 45px;}
+    .logo-club img {max-width: 100%;}
+    #club h2.awrd-heading {width: 200px;}
+
 }

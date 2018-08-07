@@ -92,15 +92,17 @@
             <h2>RUSSIA 2018: SEARCH </h2>
             <form action="{{route('search')}}" method="post">
                 @csrf
-                <div class="form-wrap">
-                    <div class="col-10">
-                        <input type="text" name="data" required>
-                    </div>
-                    <div class="col-2">
-                        <select name="what" id="what" required>
-                            <option value="teams">Teams</option>
-                            <option value="players">Players</option>
-                        </select>
+                <div class="form-wrap search bootstrap-iso">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <input type="text" name="data" required>
+                        </div>
+                        <div class="col-sm-2">
+                            <select name="what" id="what" required>
+                                <option value="teams">Teams</option>
+                                <option value="players">Players</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
