@@ -35,7 +35,20 @@
                 </div>
                 <nav id="top-menu">
                     <ul class="clearfix">
-                        <li class="{{ Route::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
+                    @auth
+                            @if(Auth::user()->hasRole('Manager'))
+                            <li class="dropdown"><a href="#">Admin</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('home')}}">Home</a></li>
+                                    <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+                                </ul>
+                            </li>
+                    @else
+                                <li class="{{ Route::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
+                            @endif
+                    @else
+                            <li class="{{ Route::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
+                    @endauth
                         <li class="{{ Route::is('teams*') ? 'active' : '' }}"><a href="{{route('teams')}}">Team</a></li>
                         <li class="{{ Route::is('news') ? 'active' : '' }}"><a href="{{ route('news') }}">News</a></li>
                         <li class="{{ Route::is('stadiums') ? 'active' : '' }}"><a href="{{route('stadiums')}}">Stadiums</a></li>
@@ -79,33 +92,35 @@
 
 <!-- Footer Section -->
 <footer>
-    <div class="container">
-        <div class="col-4" id="footer_left"><img  src="{{asset('images/footer_left.png')}}" alt=""/></div>
-        <div class="col-6 footer_social">
-            <div class="col-4">
-                <div class="social-icon">
-                    <ul id="social">
-                        <li><a href="#"><img src="{{asset('images/soc-twitter.png')}}" alt=""/></a></li>
-                        <li><a href="#"><img src="{{asset('images/soc-facebook.png')}}" alt=""/></a></li>
-                        <li><a href="#"><img src="{{asset('images/soc-g.png')}}" alt=""/></a></li>
-                        <li><a href="#"><img src="{{asset('images/soc-play.png')}}" alt=""/></a></li>
+        <div class="container">
+            <div class="row">
+                <div class="col-4" id="footer_left"><img  src="{{asset('images/footer_left.png')}}" alt=""/></div>
+                <div class="col-6 footer_social">
+                    <div class="col-4">
+                        <div class="social-icon">
+                            <ul id="social">
+                                <li><a href="#"><img src="{{asset('images/soc-twitter.png')}}" alt=""/></a></li>
+                                <li><a href="#"><img src="{{asset('images/soc-facebook.png')}}" alt=""/></a></li>
+                                <li><a href="#"><img src="{{asset('images/soc-g.png')}}" alt=""/></a></li>
+                                <li><a href="#"><img src="{{asset('images/soc-play.png')}}" alt=""/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6"><p class="copyright">© 2018 - All Rights Reserved Raghib Shahariyer</p></div>
+                </div>
+                <div class="col-2">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="{{route('home')}}">Home</a></li>
+                        <li><a href="{{route('teams')}}">Team</a></li>
+                        <li><a href="{{route('stadiums')}}">Stadiums</a></li>
+                        <li><a href="{{route('news')}}">News</a></li>
+                        <li><a href="{{route('awards')}}">Awards</a></li>
+
                     </ul>
                 </div>
             </div>
-            <div class="col-6"><p class="copyright">© 2018 - All Rights Reserved Raghib Shahariyer</p></div>
         </div>
-        <div class="col-2">
-            <h3>Information</h3>
-            <ul>
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('teams')}}">Team</a></li>
-                <li><a href="{{route('stadiums')}}">Stadiums</a></li>
-                <li><a href="{{route('news')}}">News</a></li>
-                <li><a href="{{route('awards')}}">Awards</a></li>
-
-            </ul>
-        </div>
-    </div>
 </footer>
 
 <!-- Libs -->

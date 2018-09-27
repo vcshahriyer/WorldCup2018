@@ -54,3 +54,16 @@ Route::post('/search',[
 	'as' =>'search',
 	'uses' =>'PagesController@search'
 ]);
+
+Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>'admin'), function () {
+	Route::get('/dashboard',function (){
+		return view('admin.index');
+	})->name("dashboard");
+	Route::get('users', 'UsersController@index')->name("users");
+	Route::get('users/{id?}/edit', 'UsersController@edit');
+	Route::post('users/{id?}/edit','UsersController@update');
+	Route::get('roles', 'RolesController@index')->name("roles");
+	Route::get('roles/create', 'RolesController@create')->name("create.role");
+	Route::post('roles/create', 'RolesController@store');
+});
+

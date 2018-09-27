@@ -190,14 +190,6 @@ input {
     -webkit-text-size-adjust: none;
 }
 
-body {
-    text-align: left;
-    font-family: sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 1.2;
-}
-
 /* Form
 /* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
 button,
@@ -808,6 +800,8 @@ a:visited {
 .margin-30 {
     margin: 30px 0px;
 }
+/*My column css*/
+
 
 /* buttons */
 .btn-dflt {
@@ -907,6 +901,12 @@ button.btn {
 
 /* CHECKBOX */
 /* Base for label styling */
+.user-role .my-checkbox select{
+    margin-left: 0;
+    width: 24%;
+    height: 70px;
+}
+
 label {
     line-height: 19px;
     margin: 10px 20px;
@@ -919,7 +919,7 @@ label {
     position: absolute;
     left: -9999px;
 }
-
+/* Hide the browser's default radio button */
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
     position: relative;
@@ -1605,9 +1605,9 @@ p.invalid-feedback {
     color: #fff;
 }
 .form-wrap .btn-primary{background: #143250;}
-.form-wrap a.btn.btn-link {background: #da0040}
+.form-wrap .btn-link {background: #da0040}
 .form-wrap .btn-primary:hover{opacity: 0.75;}
-.form-wrap a.btn.btn-link:hover {opacity: 0.75;}
+.form-wrap .btn.btn-link:hover {opacity: 0.75;}
 .form-wrap label.form-check-label {margin: 20px 0;}
 .form-group.row.mb-0 {margin-top: 12px;}
 
