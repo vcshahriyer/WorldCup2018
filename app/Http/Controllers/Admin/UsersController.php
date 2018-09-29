@@ -8,6 +8,7 @@ use App\User;
 use Spatie\Permission\Models\Role;
 use App\Http\Requests\UserEditFormRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\File;
 
 class UsersController extends Controller
 {
@@ -35,5 +36,14 @@ class UsersController extends Controller
 		$user->save();
 		$user->syncRoles($request->get('role'));
 		return redirect(action('Admin\UsersController@edit', $user->id))->with('status', 'The user has been updated!');
+	}
+	public function delete($id){
+		$user = User::whereId($id)->firstOrFail();
+		$image_path = $user->img;
+		if(File::exists($image_path)) {
+			File::delete($image_path);
+		}
+		$user->delete();
+		return redirect(route('users'));
 	}
 }

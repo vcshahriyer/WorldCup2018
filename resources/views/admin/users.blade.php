@@ -21,7 +21,7 @@
                     </tr>
                     @foreach($users as $user)
                         <tr>
-                            <td class="td-head"><img src="{{asset("images/".$user->img)}}" alt=""></td>
+                            <td class="td-head"><img src="{{asset($user->img)}}" alt=""></td>
                             <td><a href="{!! action('Admin\UsersController@edit', $user->id) !!}">{{$user->name}}</a></td>
                             <td>{{$user->email}}</td>
                         </tr>

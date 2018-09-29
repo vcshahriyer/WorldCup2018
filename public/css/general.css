@@ -1116,11 +1116,11 @@ table.table-striped-dflt {
 }
 
 table.table-striped-dflt tr {
-    color: #7f7f7f;
+    font-size: 1.2em;
+    color: #404040;
     text-align: center;
     line-height: 45px;
 }
-
 table.table-striped-dflt tr td:first-child {
     text-align: left;
     padding-left: 40px;
@@ -1567,6 +1567,56 @@ p.invalid-feedback {
 .register input[type=password]{
     padding: 5px 5px;
 }
+
+/*Input file css*/
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+/* style 2 */
+
+.inputfile-2 + label {
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: #bd0e3e;
+}
+
+
+
+
+
 .form-wrap input:-webkit-autofill,
 .form-wrap input:-webkit-autofill,
 .form-wrap textarea:-webkit-autofill{
@@ -1602,7 +1652,7 @@ p.invalid-feedback {
     margin: 10px 0px;
     display: block;
     font-size: 15px;
-    color: #fff;
+    color: #c4c5c7;
 }
 .form-wrap .btn-primary{background: #143250;}
 .form-wrap .btn-link {background: #da0040}

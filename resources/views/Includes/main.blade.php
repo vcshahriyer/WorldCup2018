@@ -13,7 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic%7COswald:400,300,700&amp;subset=latin,latin-ext"
           rel="stylesheet" type="text/css">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
+    <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}">
     <!-- Modernizr -->
     <script type='text/javascript' src='{{asset('js/libs/modernizr-2.5.3.min.js')}}'></script>
 
@@ -77,9 +77,9 @@
                 @if (Route::has('login'))
                 <div class="login">
                     @auth
-                        <a href="{{ route('home') }}"><span id="icon-user"><i class="fa fa-user"></i>{{{str_limit(Auth::user()->name,14)}}}</span></a><a href="{{ url('/logout') }}"><span>logout</span></a>
+                        <a href="{{ route('home') }}"><span id="icon-user"><i class="fa fa-user"></i>{{{' '.str_limit(Auth::user()->name,14)}}}</span></a><a href="{{ url('/logout') }}"><span> logout</span></a>
                         @else
-                    <a href="{{ route('login') }}"><span id="icon-user"><i class="fa fa-user"></i>log in</span></a><a href="{{ route('register') }}"><span><i class="fa fa-book"></i>register</span></a>
+                    <a href="{{ route('login') }}"><span id="icon-user"><i class="fa fa-user"></i> log in</span></a><a href="{{ route('register') }}"><span><i class="fa fa-book"></i> register</span></a>
                     @endauth
                 </div>
                 @endif
@@ -134,8 +134,10 @@
         crossorigin="anonymous"></script>
 <script type='text/javascript' src="{{asset('js/libs/jquery.flexslider-min.js')}}"></script>
 <script src="{{asset('js/jquery.bxslider.min.js')}}"></script>
+<script src="{{asset('fontawesome/js/all.min.js')}}"></script>
 
 <!-- Custom -->
 <script src="{{asset('js/scripts.js')}}"></script>
+@yield("js")
 </body>
 </html>

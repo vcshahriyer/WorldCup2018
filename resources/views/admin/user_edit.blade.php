@@ -57,7 +57,11 @@
                                         <div class="form-group row mb-0">
                                             <div class="col-lg-10 col-lg-offset-2">
                                                 <button type="reset" class="btn btn-link">Cancel</button>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                @if(in_array("Manager", $selectedRoles))
+                                                    @else
+                                                    <a href="{!! action('Admin\UsersController@delete', $user->id) !!}" class="btn btn-link">Delete user</a>
+                                                @endif
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </div>
                             </form>
